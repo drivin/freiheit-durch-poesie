@@ -1,0 +1,15 @@
+---
+import LegalMarkdown from "../components/LegalMarkdown.astro";
+import LegalLayout from "../layouts/LegalLayout.astro";
+import privacySource from "../data/legal/datenschutz.txt?raw";
+---
+
+<LegalLayout
+  title="Datenschutz"
+  label="Informationen nach Art. 13 DSGVO"
+  description="Datenschutzhinweise für die Webseite von Annika Hempel – Freiheit durch Poesie."
+>
+  <article class="legal-content legal-markdown">
+    <LegalMarkdown source={privacySource} documentTitle="Datenschutzerklärung" />
+  </article>
+</LegalLayout>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title">
+  <title id="title">Freiheit durch Poesie – Tulpenfeder</title>
+  <circle cx="60" cy="60" r="55" fill="#FFFDF8" stroke="#1F2925" stroke-width="3"/>
+  <path d="M22 81c14-6 27-4 38 7 11-11 24-13 38-7v12c-15-5-28-2-38 8-10-10-23-13-38-8V81Z" fill="none" stroke="#1F2925" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M60 88V50" fill="none" stroke="#1F2925" stroke-width="3" stroke-linecap="round"/>
+  <path d="M60 65c-8-8-15-9-21-5 4 9 11 13 21 13" fill="#82A18F" stroke="#1F2925" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M60 53C45 48 38 35 42 23c8 1 14 5 18 12 4-7 10-11 18-12 4 12-3 25-18 30Z" fill="#E95C8E" stroke="#1F2925" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M60 35c-6-6-6-14 0-20 6 6 6 14 0 20Z" fill="#F8A8C1" stroke="#1F2925" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M60 35c-3 7-3 12 0 18M46 28c2 8 7 14 14 19M74 28c-2 8-7 14-14 19" fill="none" stroke="#1F2925" stroke-width="2" stroke-linecap="round"/>
+</svg>

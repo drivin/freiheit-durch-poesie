@@ -1,0 +1,109 @@
+---
+interface Props {
+  source: string;
+  documentTitle: string;
+}
+
+type Block = {
+  type: "h2" | "h3" | "p" | "link";
+  text: string;
+  emphasis?: boolean;
+};
+
+const { source, documentTitle } = Astro.props;
+
+const subheadings = new Set([
+  "Allgemeine Hinweise",
+  "Datenerfassung auf dieser Website",
+  "Wer ist verantwortlich für die Datenerfassung auf dieser Website?",
+  "Wie erfassen wir Ihre Daten?",
+  "Wofür nutzen wir Ihre Daten?",
+  "Welche Rechte haben Sie bezüglich Ihrer Daten?",
+  "Externes Hosting",
+  "Auftragsverarbeitung",
+  "Datenschutz",
+  "Hinweis zur verantwortlichen Stelle",
+  "Speicherdauer",
+  "Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website",
+  "Empfänger von personenbezogenen Daten",
+  "Widerruf Ihrer Einwilligung zur Datenverarbeitung",
+  "Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)",
+  "Beschwerderecht bei der zuständigen Aufsichtsbehörde",
+  "Recht auf Datenübertragbarkeit",
+  "Auskunft, Berichtigung und Löschung",
+  "Recht auf Einschränkung der Verarbeitung",
+  "SSL- bzw. TLS-Verschlüsselung",
+  "Anfrage per E-Mail, Telefon oder Telefax",
+  "Kontakt",
+  "Quelle:",
+]);
+
+const normalized = source
+  .replace(/\r\n/g, "\n")
+  .replace(
+    "Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser\nWebsite",
+    "Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website",
+  )
+  .replace(
+    "Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen\nDirektwerbung (Art. 21 DSGVO)",
+    "Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)",
+  )
+  .replaceAll("ITSysteme", "IT-Systeme")
+  .replaceAll("TLSVerschlüsselung", "TLS-Verschlüsselung");
+
+const blocks: Block[] = [];
+let buffer: string[] = [];
+
+const flush = () => {
+  if (buffer.length === 0) return;
+  const text = buffer.join(" ").replace(/\s+/g, " ").trim();
+  if (text) {
+    blocks.push({
+      type: /^https?:\/\//.test(text) ? "link" : "p",
+      text,
+      emphasis: text.length > 100 && text === text.toUpperCase(),
+    });
+  }
+  buffer = [];
+};
+
+for (const rawLine of normalized.split("\n")) {
+  const line = rawLine.trim();
+
+  if (!line || line === documentTitle || /^\d+\s*\/\s*\d+$/.test(line)) {
+    flush();
+    continue;
+  }
+
+  if (/^\d+\.\s+/.test(line)) {
+    flush();
+    blocks.push({ type: "h2", text: line });
+    continue;
+  }
+
+  if (subheadings.has(line)) {
+    flush();
+    blocks.push({ type: "h3", text: line });
+    continue;
+  }
+
+  buffer.push(line);
+  if (/[.!?)]$/.test(line) || /^https?:\/\//.test(line)) flush();
+}
+
+flush();
+---
+
+{
+  blocks.map((block) =>
+    block.type === "h2" ? (
+      <h2>{block.text}</h2>
+    ) : block.type === "h3" ? (
+      <h3>{block.text}</h3>
+    ) : block.type === "link" ? (
+      <p><a href={block.text} target="_blank" rel="noreferrer">{block.text}</a></p>
+    ) : (
+      <p class:list={{ "legal-emphasis": block.emphasis }}>{block.text}</p>
+    ),
+  )
+}

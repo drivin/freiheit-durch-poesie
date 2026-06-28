@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+.agents/
+*.md
+
+# Nur die auf der Website verwendeten Logo-Dateien veröffentlichen.
+public/logo/alternative-*/
+public/logo/logo-horizontal*.svg
+public/logo/logo-mark-mono.svg

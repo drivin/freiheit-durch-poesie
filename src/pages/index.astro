@@ -1,0 +1,379 @@
+---
+import "../styles/global.css";
+
+const offers = [
+  {
+    number: "01",
+    title: "Positive Poesie",
+    text: "Poetische Beiträge für Feiern, Kongresse, Fachvorträge und besondere Veranstaltungen.",
+    audience: "Für Veranstalter · Einrichtungen · Unternehmen",
+    accent: "coral",
+  },
+  {
+    number: "02",
+    title: "Persönliche Worte",
+    text: "Individuelle Gedichte und Positive Recordings als Geschenk, Erinnerung oder kreative Botschaft.",
+    audience: "Für Privatpersonen · Unternehmen",
+    accent: "yellow",
+  },
+  {
+    number: "03",
+    title: "Coaching & Beratung",
+    text: "Ressourcenorientierte Begleitung mit Impulsen aus Pädagogik, Positiver Psychologie und PERMA-V.",
+    audience: "Für Privatpersonen · Einrichtungen",
+    accent: "blue",
+  },
+  {
+    number: "04",
+    title: "Kreative Bildung",
+    text: "Schreibkurse, kreatives Arbeiten und Medienpädagogik für gemeinsames Lernen und Gestalten.",
+    audience: "Für Einrichtungen · Veranstalter · Unternehmen",
+    accent: "green",
+  },
+];
+
+const principles = [
+  ["01", "Zuhören", "Was soll entstehen – und wen dürfen die Worte erreichen?"],
+  ["02", "Verdichten", "Gedanken, Wissen und Emotionen finden eine klare poetische Form."],
+  ["03", "Berühren", "Das Ergebnis schafft einen Moment, der verbindet und nachwirkt."],
+];
+
+const educationalOffers = [
+  {
+    number: "01",
+    kicker: "Wohlbefinden stärken",
+    title: "Positive Psychologie",
+    text: "Workshops rund um PERMA-V, Stärkenorientierung, Selbstwirksamkeit und einen ressourcenvollen pädagogischen Alltag.",
+    topics: ["PERMA-V", "Stärken", "Selbstwirksamkeit", "Zuversicht"],
+  },
+  {
+    number: "02",
+    kicker: "Digital bewusst handeln",
+    title: "Medienpädagogik",
+    text: "Reflexive und kreative Zugänge zu Mediennutzung, digitalem Wohlbefinden, Identität und respektvoller Kommunikation.",
+    topics: ["Medienkompetenz", "Digitales Wohlbefinden", "Identität", "Kreativprojekte"],
+  },
+  {
+    number: "03",
+    kicker: "Ausdruck ermöglichen",
+    title: "Kreatives Schreiben",
+    text: "Poesie und Schreibimpulse als Werkzeuge für Ausdruck, Perspektivwechsel, Verbindung und persönliche Entwicklung.",
+    topics: ["Poesie", "Perspektivwechsel", "Ausdruck", "Verbundenheit"],
+  },
+];
+
+const permaDimensions = [
+  ["P", "Positive Emotionen", "Freude, Hoffnung und Zuversicht bewusst wahrnehmen."],
+  ["E", "Engagement", "Stärken einsetzen und ganz in einer Tätigkeit aufgehen."],
+  ["R", "Relationships", "Tragfähige und wertschätzende Beziehungen gestalten."],
+  ["M", "Meaning", "Sinn erleben und sich als Teil von etwas Größerem verstehen."],
+  ["A", "Accomplishment", "Ziele verfolgen, Fortschritte sehen und Wirksamkeit erleben."],
+  ["V", "Vitalität", "Körperliche und mentale Energie durch Bewegung und Erholung stärken."],
+];
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Annika Hempel verbindet Positive Poesie, Coaching, Medienpädagogik und Workshops zur Positiven Psychologie."
+    />
+    <title>Annika Hempel · Freiheit durch Poesie</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Zur Startseite">
+        <img class="brand-mark" src="./logo/logo-mark-light.svg" alt="" width="42" height="42" />
+        <span>
+          <strong>Annika Hempel</strong>
+          <small>Freiheit durch Poesie</small>
+        </span>
+      </a>
+
+      <nav aria-label="Hauptnavigation">
+        <a href="#angebote">Angebote</a>
+        <a href="#paedagogik">Pädagogik</a>
+        <a href="#ueber-mich">Über mich</a>
+        <a href="#arbeitsweise">Arbeitsweise</a>
+      </nav>
+
+      <a class="header-cta" href="#kontakt">Projekt anfragen <span>↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Positive Poesie · Coaching · Kreative Bildung</p>
+          <h1>Worte, die<br /><em>etwas bewegen.</em></h1>
+          <p class="hero-intro">
+            Poesie macht Wissen fühlbar, verbindet Menschen und öffnet neue
+            Perspektiven. Für persönliche Momente, starke Veranstaltungen und
+            gelingendes Leben.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#angebote">Angebote entdecken <span>↓</span></a>
+            <a class="text-link" href="#ueber-mich">Annika kennenlernen <span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <div class="sun" aria-hidden="true"></div>
+          <div class="portrait-placeholder">
+            <img
+              src="./img/portrait.jpg"
+              alt="Portrait von Annika Hempel mit einer pinken Tulpe"
+              width="1600"
+              height="2000"
+            />
+          </div>
+          <div class="hero-note">
+            <span>✦</span>
+            <p>„Weil das Hier & Jetzt es wert ist, gelebt zu werden.“</p>
+          </div>
+        </div>
+
+        <div class="scroll-note" aria-hidden="true">Scrollen, um mehr zu entdecken <span>↓</span></div>
+      </section>
+
+      <section class="manifesto" aria-label="Leitgedanke">
+        <p>AUTHENTIZITÄT</p><span>✦</span>
+        <p>KREATIVITÄT</p><span>✦</span>
+        <p>VERBUNDENHEIT</p><span>✦</span>
+        <p>ZUVERSICHT</p>
+      </section>
+
+      <section class="offers section" id="angebote">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Was entstehen darf</p>
+            <h2>Worte für Menschen<br />und <em>besondere Momente.</em></h2>
+          </div>
+          <p>
+            Angebote an der Schnittstelle von Poesie, Positiver Psychologie und
+            Pädagogik – passend zum Anlass und zu den Menschen.
+          </p>
+        </div>
+
+        <div class="offer-grid">
+          {
+            offers.map((offer) => (
+              <article class={`offer-card ${offer.accent}`}>
+                <div class="offer-top">
+                  <span>{offer.number}</span>
+                  <span class="offer-icon" aria-hidden="true">↗</span>
+                </div>
+                <h3>{offer.title}</h3>
+                <p>{offer.text}</p>
+                <small>{offer.audience}</small>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="education section" id="paedagogik">
+        <div class="education-heading">
+          <div>
+            <p class="eyebrow">Pädagogische Angebote</p>
+            <h2>Lernen, das stärkt<br />und <em>in Bewegung bringt.</em></h2>
+          </div>
+          <div class="education-lead">
+            <p>
+              Für pädagogische Einrichtungen, Teams und Lerngruppen entstehen
+              Angebote, die wissenschaftliche Impulse mit kreativem Erleben
+              und konkretem Transfer verbinden.
+            </p>
+            <span>Inhalt und Umfang werden passend zum jeweiligen Kontext abgestimmt.</span>
+          </div>
+        </div>
+
+        <div class="perma-panel">
+          <div class="perma-intro">
+            <p class="eyebrow">Kurz erklärt</p>
+            <h3>Was bedeutet <em>PERMA‑V?</em></h3>
+            <p>
+              Das Modell beschreibt sechs Zugänge zu Wohlbefinden und
+              gelingendem Leben. PERMA‑V erweitert das ursprüngliche
+              PERMA-Modell um den Aspekt der Vitalität.
+            </p>
+          </div>
+          <dl class="perma-grid">
+            {
+              permaDimensions.map(([letter, title, text]) => (
+                <div class="perma-item">
+                  <dt><span>{letter}</span>{title}</dt>
+                  <dd>{text}</dd>
+                </div>
+              ))
+            }
+          </dl>
+        </div>
+
+        <div class="education-grid">
+          {
+            educationalOffers.map((offer) => (
+              <article class="education-card">
+                <div class="education-card-top">
+                  <span>{offer.number}</span>
+                  <small>{offer.kicker}</small>
+                </div>
+                <h3>{offer.title}</h3>
+                <p>{offer.text}</p>
+                <ul aria-label={`Themen von ${offer.title}`}>
+                  {offer.topics.map((topic) => <li>{topic}</li>)}
+                </ul>
+              </article>
+            ))
+          }
+        </div>
+
+        <div class="format-strip">
+          <p>Als Format möglich</p>
+          <ul>
+            <li>Workshop</li>
+            <li>Projekttag</li>
+            <li>Fortbildung</li>
+            <li>Impulsvortrag</li>
+          </ul>
+          <a href="#kontakt">Angebot besprechen <span>↗</span></a>
+        </div>
+      </section>
+
+      <section class="about section" id="ueber-mich">
+        <div class="about-art">
+          <div class="about-photo">
+            <img
+              src="./img/action.jpg"
+              alt="Annika Hempel bei einem Auftritt am Mikrofon"
+              width="1279"
+              height="1917"
+              loading="lazy"
+            />
+          </div>
+          <span class="about-stamp">POETIN · AUTORIN · COACH</span>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow">Über Annika</p>
+          <h2>Ich glaube an die Kraft der <em>richtigen Worte.</em></h2>
+          <p class="lead">
+            Ich verbinde Poesie mit Pädagogik und Positiver Psychologie. So
+            entstehen Räume, in denen Menschen sich selbst und einander neu
+            begegnen können.
+          </p>
+          <p>
+            Mit Authentizität, Kreativität und Mut begleite ich persönliche
+            Prozesse, gestalte kreative Lernmomente und bringe die Essenz von
+            Veranstaltungen poetisch auf den Punkt.
+          </p>
+          <div class="about-tags" aria-label="Thematische Schwerpunkte">
+            <span>Positive Psychologie</span>
+            <span>PERMA-V</span>
+            <span>Systemisches Coaching</span>
+            <span>Medienpädagogik</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="process section" id="arbeitsweise">
+        <div class="section-heading process-heading">
+          <div>
+            <p class="eyebrow">Arbeitsweise</p>
+            <h2>Vom ersten Gedanken<br />bis zum <em>Nachklang.</em></h2>
+          </div>
+        </div>
+        <div class="process-list">
+          {
+            principles.map(([number, title, text]) => (
+              <article>
+                <span>{number}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="contact section" id="kontakt">
+        <div class="contact-spark" aria-hidden="true">✦</div>
+        <p class="eyebrow">Etwas im Sinn?</p>
+        <h2>Lass uns Worte dafür <em>finden.</em></h2>
+        <p>
+          Ob persönliches Gedicht, Veranstaltung oder pädagogisches Projekt:
+          Schreib mir eine E-Mail, ruf mich an oder folge meiner Arbeit auf
+          Instagram.
+        </p>
+        <div class="contact-actions">
+          <a class="contact-mail" href="mailto:annika@freiheitdurchpoesie.de">
+            E-Mail schreiben <span aria-hidden="true">↗</span>
+          </a>
+          <div class="contact-separator" aria-hidden="true">
+            <span>oder direkt</span>
+          </div>
+          <div class="contact-details">
+            <a class="contact-detail contact-phone" href="tel:+4915129537175">
+              <span class="contact-icon-wrap" aria-hidden="true">
+                <svg class="contact-icon" viewBox="0 0 24 24">
+                  <path d="M6.6 3.5 9 8.1 6.9 9.9c1.3 2.8 3.5 5 6.3 6.3l1.8-2.1 4.6 2.4-.8 3.3c-.2.7-.8 1.2-1.5 1.2C9.4 20.5 3.5 14.6 3 6.7c0-.7.5-1.3 1.2-1.5l2.4-.7Z" />
+                </svg>
+              </span>
+              <span class="contact-copy">
+                <small>Telefon</small>
+                <span>0151 29537175</span>
+              </span>
+            </a>
+            <a
+              class="contact-detail contact-instagram"
+              href="https://www.instagram.com/annika.unterm.sofa/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="contact-icon-wrap" aria-hidden="true">
+                <svg class="contact-icon" viewBox="0 0 24 24">
+                  <defs>
+                    <linearGradient id="instagram-gradient" x1="2" y1="22" x2="22" y2="2">
+                      <stop offset="0" stop-color="#F9CE34" />
+                      <stop offset=".5" stop-color="#EE2A7B" />
+                      <stop offset="1" stop-color="#6228D7" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4.2" />
+                  <circle class="instagram-dot" cx="17.4" cy="6.8" r="1.1" />
+                </svg>
+              </span>
+              <span class="contact-copy">
+                <small>Instagram</small>
+                <span>@annika.unterm.sofa</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="#top">
+        <img class="brand-mark" src="./logo/logo-mark-light.svg" alt="" width="42" height="42" />
+        <span><strong>Annika Hempel</strong><small>Freiheit durch Poesie</small></span>
+      </a>
+      <p>
+        © <span data-current-year>{new Date().getFullYear()}</span> Annika Hempel.
+        Alle Rechte vorbehalten.
+      </p>
+      <div>
+        <a href="./impressum/">Impressum</a>
+        <a href="./datenschutz/">Datenschutz</a>
+      </div>
+    </footer>
+    <script is:inline>
+      document.querySelectorAll("[data-current-year]").forEach((element) => {
+        element.textContent = String(new Date().getFullYear());
+      });
+    </script>
+  </body>
+</html>

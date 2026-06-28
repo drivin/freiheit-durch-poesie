@@ -1,0 +1,56 @@
+---
+import LegalLayout from "../layouts/LegalLayout.astro";
+import impressumSource from "../data/legal/impressum.txt?raw";
+
+const lines = impressumSource
+  .split(/\r?\n/)
+  .map((line) => line.trim())
+  .filter(Boolean);
+
+const name = lines[1];
+const street = lines[2];
+const city = lines[3];
+const phone = lines.find((line) => line.startsWith("Telefon:"))?.replace("Telefon:", "").trim();
+const email = lines.find((line) => line.startsWith("E-Mail:"))?.replace("E-Mail:", "").trim();
+---
+
+<LegalLayout
+  title="Impressum"
+  label="Rechtliche Angaben"
+  description="Impressum und Anbieterkennzeichnung von Annika Hempel – Freiheit durch Poesie."
+>
+  <article class="legal-content">
+    <header class="legal-intro">
+      <p>Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG).</p>
+    </header>
+
+    <section>
+      <span class="legal-index">01</span>
+      <div>
+        <h2>Anbieterin</h2>
+        <address>
+          <strong>{name}</strong><br />
+          {street}<br />
+          {city}
+        </address>
+      </div>
+    </section>
+
+    <section>
+      <span class="legal-index">02</span>
+      <div>
+        <h2>Kontakt</h2>
+        <dl class="legal-data">
+          <div>
+            <dt>Telefon</dt>
+            <dd><a href="tel:+4915129537175">{phone}</a></dd>
+          </div>
+          <div>
+            <dt>E-Mail</dt>
+            <dd><a href={`mailto:${email}`}>{email}</a></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </article>
+</LegalLayout>

@@ -1,0 +1,56 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  label: string;
+}
+
+const { title, description, label } = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>{title} · Annika Hempel</title>
+  </head>
+  <body class="legal-body">
+    <header class="legal-header">
+      <a class="brand" href="../" aria-label="Zur Startseite">
+        <img class="brand-mark" src="../logo/logo-mark.svg" alt="" width="42" height="42" />
+        <span>
+          <strong>Annika Hempel</strong>
+          <small>Freiheit durch Poesie</small>
+        </span>
+      </a>
+      <a class="legal-back" href="../">Zurück zur Startseite <span>↗</span></a>
+    </header>
+
+    <main>
+      <section class="legal-hero">
+        <p class="eyebrow">{label}</p>
+        <h1>{title}</h1>
+        <div class="legal-orbit" aria-hidden="true">
+          <span>§</span>
+        </div>
+      </section>
+
+      <div class="legal-shell">
+        <slot />
+      </div>
+    </main>
+
+    <footer class="legal-footer">
+      <a href="../">Startseite</a>
+      <nav aria-label="Rechtliche Navigation">
+        <a href="../impressum/">Impressum</a>
+        <a href="../datenschutz/">Datenschutz</a>
+      </nav>
+    </footer>
+  </body>
+</html>
