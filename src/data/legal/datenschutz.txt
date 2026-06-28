@@ -42,15 +42,21 @@ Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung
 Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung
 von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im
 Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.
-Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner
-Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen.
-Wir setzen folgende(n) Hoster ein:
-Febas – Roman Baumgärtner, Ostlandstraße 5, 49565 Bramsche, Deutschland
-Auftragsverarbeitung
-Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung des oben genannten Dienstes
-geschlossen. Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der
-gewährleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher nur nach unseren
-Weisungen und unter Einhaltung der DSGVO verarbeitet.
+Wir setzen folgenden Hostingdienst ein:
+GitHub Pages, ein Dienst von GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.
+GitHub nennt für Europa außerdem GitHub B.V., Prins Bernhardplein 200, 1097 JB Amsterdam,
+Niederlande, als Kontaktanschrift.
+Beim Besuch einer GitHub-Pages-Website wird die IP-Adresse der Besucherinnen und Besucher zu
+Sicherheitszwecken durch GitHub protokolliert und gespeichert. Die Verarbeitung erfolgt auf Grundlage
+unseres berechtigten Interesses an einer sicheren, schnellen und effizienten Bereitstellung unseres
+Online-Angebots gemäß Art. 6 Abs. 1 lit. f DSGVO.
+GitHub verarbeitet personenbezogene Daten nach eigenen Angaben unter anderem in den USA und in
+weiteren Ländern. Für Datenübermittlungen aus der Europäischen Union in Länder ohne anerkannt
+angemessenes Datenschutzniveau stützt sich GitHub nach eigenen Angaben grundsätzlich auf die
+Standardvertragsklauseln der Europäischen Kommission. GitHub ist außerdem nach dem EU-US Data
+Privacy Framework zertifiziert.
+Weitere Informationen finden Sie in der Datenschutzerklärung von GitHub:
+https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement
 3. Allgemeine Hinweise und Pflichtinformationen
 Datenschutz
 Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre
@@ -68,7 +74,7 @@ Hinweis zur verantwortlichen Stelle
 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
 Annika Hempel, Mittelgasse 37, 34117 Kassel, Deutschland
 Telefon: +49 (0) 151 29 53 71 75
-E-Mail: annika@freiheitdurchpoesie.de
+E-Mail: freiheitdurchpoesie@outlook.de
 Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über
 die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.)
 entscheidet.
