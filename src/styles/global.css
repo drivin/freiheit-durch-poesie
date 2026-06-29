@@ -129,8 +129,7 @@ a {
 .hero-copy {
   z-index: 1;
   align-self: center;
-  max-width: 720px;
-  padding: 160px 7vw 110px max(7vw, calc((100vw - 1360px) / 2));
+  padding: 160px clamp(32px, 4vw, 64px) 110px max(7vw, calc((100vw - 1360px) / 2));
 }
 
 .eyebrow {
@@ -153,6 +152,10 @@ h2 {
 h1 {
   max-width: 720px;
   font-size: clamp(62px, 7.4vw, 112px);
+}
+
+.hero-title-line {
+  white-space: nowrap;
 }
 
 h1 em,

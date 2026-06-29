@@ -70,18 +70,115 @@ const permaDimensions = [
   ["A", "Accomplishment", "Ziele verfolgen, Fortschritte sehen und Wirksamkeit erleben."],
   ["V", "Vitalität", "Körperliche und mentale Energie durch Bewegung und Erholung stärken."],
 ];
+
+const siteUrl = Astro.site ?? new URL("https://freiheitdurchpoesie.de");
+const canonicalUrl = new URL("/", siteUrl).toString();
+const socialImageUrl = new URL("/img/portrait.jpg", siteUrl).toString();
+const pageTitle = "Annika Hempel | Poesie, Workshops & Positive Psychologie in Kassel und Nordhessen";
+const pageDescription =
+  "Positive Poesie, persönliche Gedichte, Coaching und Workshops zu Medienpädagogik und Positiver Psychologie – Angebote von Annika Hempel in Kassel und Nordhessen.";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${canonicalUrl}#website`,
+      url: canonicalUrl,
+      name: "Freiheit durch Poesie",
+      inLanguage: "de",
+      publisher: {
+        "@id": `${canonicalUrl}#person`,
+      },
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: pageTitle,
+      description: pageDescription,
+      isPartOf: {
+        "@id": `${canonicalUrl}#website`,
+      },
+      about: {
+        "@id": `${canonicalUrl}#person`,
+      },
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: socialImageUrl,
+      },
+      inLanguage: "de",
+    },
+    {
+      "@type": "Person",
+      "@id": `${canonicalUrl}#person`,
+      name: "Annika Hempel",
+      url: canonicalUrl,
+      image: socialImageUrl,
+      jobTitle: "Poetin, Autorin und Coach",
+      email: "mailto:freiheitdurchpoesie@outlook.de",
+      telephone: "+4915129537175",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Mittelgasse 37",
+        postalCode: "34117",
+        addressLocality: "Kassel",
+        addressCountry: "DE",
+      },
+      sameAs: ["https://www.instagram.com/annika.unterm.sofa/"],
+      knowsAbout: [
+        "Positive Poesie",
+        "Positive Psychologie",
+        "PERMA-V",
+        "Medienpädagogik",
+        "Kreatives Schreiben",
+        "Coaching",
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Angebote von Freiheit durch Poesie",
+        itemListElement: offers.map((offer) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: offer.title,
+            description: offer.text,
+            provider: {
+              "@id": `${canonicalUrl}#person`,
+            },
+            areaServed: {
+              "@type": "Place",
+              name: "Kassel und Nordhessen",
+            },
+          },
+        })),
+      },
+    },
+  ],
+};
 ---
 
 <!doctype html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta
-      name="description"
-      content="Annika Hempel verbindet Positive Poesie, Coaching, Medienpädagogik und Workshops zur Positiven Psychologie."
-    />
-    <title>Annika Hempel · Freiheit durch Poesie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={pageDescription} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Freiheit durch Poesie" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:alt" content="Portrait von Annika Hempel mit einer pinken Tulpe" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <title>{pageTitle}</title>
   </head>
   <body>
     <header class="site-header">
@@ -107,11 +204,11 @@ const permaDimensions = [
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow">Positive Poesie · Coaching · Kreative Bildung</p>
-          <h1>Worte, die<br /><em>etwas bewegen.</em></h1>
+          <h1><span class="hero-title-line">Worte, die</span><br /><em>etwas bewegen.</em></h1>
           <p class="hero-intro">
             Poesie macht Wissen fühlbar, verbindet Menschen und öffnet neue
             Perspektiven. Für persönliche Momente, starke Veranstaltungen und
-            gelingendes Leben.
+            gelingendes Leben in Kassel und Umgebung.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#angebote">Angebote entdecken <span>↓</span></a>
@@ -314,8 +411,7 @@ const permaDimensions = [
         <h2>Lass uns Worte dafür <em>finden.</em></h2>
         <p>
           Ob persönliches Gedicht, Veranstaltung oder pädagogisches Projekt:
-          Schreib mir eine E-Mail, ruf mich an oder folge meiner Arbeit auf
-          Instagram.
+          in Kassel und Umgebung findest du hier den direkten Kontakt.
         </p>
         <div class="contact-actions">
           <a class="contact-mail" href="mailto:freiheitdurchpoesie@outlook.de">
