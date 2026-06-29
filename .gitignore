@@ -2,6 +2,7 @@ node_modules/
 dist/
 .astro/
 .agents/
+print/
 *.md
 
 # Nur die auf der Website verwendeten Logo-Dateien veröffentlichen.
