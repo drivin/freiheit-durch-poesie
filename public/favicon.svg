@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Freiheit durch Poesie">
+  <circle cx="32" cy="32" r="28" fill="#FFFDF8" stroke="#1F2925" stroke-width="3"/>
+  <path d="M16 43c7-3 12-2 16 3 4-5 9-6 16-3v7c-7-2-12-1-16 4-4-5-9-6-16-4v-7Z" fill="none" stroke="#1F2925" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 46V28" fill="none" stroke="#1F2925" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M32 36c-5-5-9-5-13-3 3 5 7 7 13 7" fill="#82A18F" stroke="#1F2925" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M32 30C23 27 19 19 21 12c5 1 8 3 11 7 3-4 6-6 11-7 2 7-2 15-11 18Z" fill="#E95C8E" stroke="#1F2925" stroke-width="2.6" stroke-linejoin="round"/>
+  <path d="M32 19c-4-4-4-8 0-12 4 4 4 8 0 12Z" fill="#F8A8C1" stroke="#1F2925" stroke-width="2.2" stroke-linejoin="round"/>
+</svg>
